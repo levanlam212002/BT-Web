@@ -9,11 +9,68 @@
     <link href="information.css" rel="stylesheet" />
     <script src="index.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+  
+          $("#gototop").hide();
+  
+          $(window).scroll(function(){
+              if($(this).scrollTop() >= 100)
+                $("#gototop").show("slow")
+              else
+                $("#gototop").hide("slow")
+              if($(this).scrollTop() >= 100)
+              {
+                $("nav").css({
+                  "position" : "fixed",
+                  "left":0,
+                  "top":0,
+                  "right":0,
+                  "z-index":99             
+                 })
+                $("#logo").show("slow")
+              }
+              else{
+                $("nav").css({
+                  "position" : "relative"            
+                 })
+                $("#logo").hide("slow")
+              }
+              if ($(this).width() <= 415) {
+                $("nav").css({
+                  "display": "none"            
+                 })
+                 if($(this).scrollTop()>= 80)
+                 {
+                 $("#logo1").css({
+                  "position" : "fixed",
+                  "left":0,
+                  "top":0,
+                  "right":0,
+                  "z-index":99 
+                 })
+                }
+                else{
+                $("#logo1").css({
+                  "position" : "relative"           
+                 })
+              }
+              }
+          })
+          $("#gototop").click(function(){
+              $("html, body").animate({
+                  scrollTop: 0
+              }, 1000);
+          })
+  
+        })
+    </script>
 </head>
-<body name="top">
-    <div class="logo">
+<body>
+    <div class="logo" id="logo1">
         <div class="text-center">
-          <img src="https://www.converse.com.vn/pictures/catalog/logo/newlogo-160x30.png" alt="Converse"/>
+          <img src="img/newlogo-160x30.png" alt="Converse"/>
         </div>
         <ul class="text-center subs">
           <a href="#"><i class="fas fa-bars fa-2x"></i></a>
@@ -38,6 +95,9 @@
         </div>
         <nav>
             <ul class = "menu">
+                <li id="logo">
+                    <img src="img/newlogo-160x30.png" alt="Converse"/>
+                </li>
                 <li>
                     <a href="index.html">TRANG CHỦ</a>
                 </li>
@@ -85,13 +145,13 @@
             <div class="tour">
                 <div class="img-big">
                 <div class="img-small">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570773c/570773Cstandard.jpg" onclick="changeImage16(this)"/>
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570773c/570773Cshot2.jpg" onclick="changeImage16(this)"/>
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570773c/570773Cshot4.jpg" onclick="changeImage16(this)"/>
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570773c/570773Cshot3.jpg" onclick="changeImage16(this)"/>
+                    <img src="img/570773Cstandard.jpg" onclick="changeImage16(this)"/>
+                    <img src="img/570773Cshot2.jpg" onclick="changeImage16(this)"/>
+                    <img src="img/570773Cshot4.jpg" onclick="changeImage16(this)"/>
+                    <img src="img/570773Cshot3.jpg" onclick="changeImage16(this)"/>
                 </div>
                 <div class="img">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570773c/570773Cstandard.jpg" title="Chuck Taylor All Star Lift Archive Print Low Top
+                    <img src="img/570773Cstandard.jpg" title="Chuck Taylor All Star Lift Archive Print Low Top
                     SKU: 570773C
                     Chất liệu: Canvas
                     Giới tính: Women
@@ -128,13 +188,13 @@
             <div class="tour">
                 <div class="img-big">
                 <div class="img-small">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171478v/171478Cstandard.jpg" onclick="changeImage(this)"/>
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171478v/171478Cshot3.jpg" onclick="changeImage(this)"/>
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171478v/171478Cshot4.jpg" onclick="changeImage(this)"/>
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171478v/171478Cshot2.jpg" onclick="changeImage(this)"/>
+                    <img src="img/171478Cstandard.jpg" onclick="changeImage(this)"/>
+                    <img src="img/171478Cshot2.jpg" onclick="changeImage(this)"/>
+                    <img src="img/171478Cshot3.jpg" onclick="changeImage(this)"/>
+                    <img src="img/171478Cshot4.jpg" onclick="changeImage(this)"/>
                 </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171478v/171478Cstandard.jpg" title="Chuck 70 Low Top
+                    <img src="img/171478Cstandard.jpg" title="Chuck 70 Low Top
                     SKU: 171478V 
                     Chất liệu: Polyester Canvas 
                     Giới tính: Women, Men
@@ -171,13 +231,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171479v/171479Cstandard.jpg" onclick="changeImage1(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171479v/171479Cshot2.jpg" onclick="changeImage1(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171479v/171479Cshot4.jpg" onclick="changeImage1(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171479v/171479Cshot3.jpg" onclick="changeImage1(this)"/>
+                        <img src="img/171479Cstandard.jpg" onclick="changeImage1(this)"/>
+                        <img src="img/171479Cshot2.jpg" onclick="changeImage1(this)"/>
+                        <img src="img/171479Cshot4.jpg" onclick="changeImage1(this)"/>
+                        <img src="img/171479Cshot3.jpg" onclick="changeImage1(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171479v/171479Cstandard.jpg" title="Chuck 70 Low Top
+                    <img src="img/171479Cstandard.jpg" title="Chuck 70 Low Top
                     SKU: 171479V
                     Chất liệu: Polyester Canvas
                     Giới tính: Women, Men
@@ -211,13 +271,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170804c/170804Cstandard.jpg" onclick="changeImage2(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170804c/170804Cshot2.jpg" onclick="changeImage2(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170804c/170804Cshot4.jpg" onclick="changeImage2(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170804c/170804Cshot5.jpg" onclick="changeImage2(this)"/>
+                        <img src="img/170804Cstandard.jpg" onclick="changeImage2(this)"/>
+                        <img src="img/170804Cshot2.jpg" onclick="changeImage2(this)"/>
+                        <img src="img/170804Cshot4.jpg" onclick="changeImage2(this)"/>
+                        <img src="img/170804Cshot5.jpg" onclick="changeImage2(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170804c/170804Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
+                    <img src="img/170804Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
                     SKU: 170804C
                     Chất liệu: Canvas
                     Giới tính: Women, Men
@@ -251,13 +311,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170801c/170801Cstandard.jpg" onclick="changeImage3(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170801c/170801Cshot2.jpg" onclick="changeImage3(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170801c/170801Cshot4.jpg" onclick="changeImage3(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170801c/170801Cshot3.jpg" onclick="changeImage3(this)"/>
+                        <img src="img/170801Cstandard.jpg" onclick="changeImage3(this)"/>
+                        <img src="img/170801Cshot2.jpg" onclick="changeImage3(this)"/>
+                        <img src="img/170801Cshot4.jpg" onclick="changeImage3(this)"/>
+                        <img src="img/170801Cshot3.jpg" onclick="changeImage3(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170801c/170801Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
+                    <img src="img/170801Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
                     SKU: 170801C
                     Chất liệu: Canvas
                     Giới tính: Women, Men
@@ -294,13 +354,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570487c/570487standard.jpg" onclick="changeImage4(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570487c/570487shot3.jpg" onclick="changeImage4(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570487c/570487shot5.jpg" onclick="changeImage4(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570487c/570487shot1.jpg" onclick="changeImage4(this)"/>
+                        <img src="img/570487standard.jpg" onclick="changeImage4(this)"/>
+                        <img src="img/570487shot3.jpg" onclick="changeImage4(this)"/>
+                        <img src="img/570487shot5.jpg" onclick="changeImage4(this)"/>
+                        <img src="img/570487shot1.jpg" onclick="changeImage4(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/570487c/570487standard.jpg" title="Chuck Taylor All Star My Story Low-Top
+                    <img src="img/570487standard.jpg" title="Chuck Taylor All Star My Story Low-Top
                     SKU: 570487C
                     Chất liệu: Canvas
                     Giới tính: Women
@@ -337,13 +397,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2020/169603c/169603Cstandard.jpg" onclick="changeImage17(this)"/>
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2020/169603c/169603Cshot2.jpg" onclick="changeImage17(this)"/>
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2020/169603c/169603Cshot4.jpg" onclick="changeImage17(this)"/>
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2020/169603c/169603Cshot5.jpg" onclick="changeImage17(this)"/>
+                        <img src="img/169603Cstandard.jpg" onclick="changeImage17(this)"/>
+                        <img src="img/169603Cshot2.jpg" onclick="changeImage17(this)"/>
+                        <img src="img/169603Cshot4.jpg" onclick="changeImage17(this)"/>
+                        <img src="img/169603Cshot5.jpg" onclick="changeImage17(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2020/169603c/169603Cstandard.jpg" title="Chuck Taylor All Star CX Hi-Vis High-Top
+                    <img src="img/169603Cstandard.jpg" title="Chuck Taylor All Star CX Hi-Vis High-Top
                     SKU: 169603C
                     Chất liệu: Cotton
                     Giới tính: Men
@@ -380,13 +440,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171242c/171242Cstandard.jpg" onclick="changeImage15(this)"/>
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171242c/171242Cshot2.jpg" onclick="changeImage15(this)"/>
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171242c/171242Cshot4.jpg" onclick="changeImage15(this)"/>
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171242c/171242Cshot3.jpg" onclick="changeImage15(this)"/>
+                        <img src="img/171242Cstandard.jpg" onclick="changeImage15(this)"/>
+                        <img src="img/171242Cshot2.jpg" onclick="changeImage15(this)"/>
+                        <img src="img/171242Cshot4.jpg" onclick="changeImage15(this)"/>
+                        <img src="img/171242Cshot3.jpg" onclick="changeImage15(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171242c/171242Cstandard.jpg" title="Converse x Chinatown Market x NBA Chuck 70 High-Top [Limited Edition]
+                    <img src="img/171242Cstandard.jpg" title="Converse x Chinatown Market x NBA Chuck 70 High-Top [Limited Edition]
                     SKU: 171242C
                     Chất liệu: Leather
                     Giới tính: Men
@@ -423,13 +483,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171859v/171859Cstandard.jpg" onclick="changeImage5(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171859v/171859Cshot2.jpg" onclick="changeImage5(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171859v/171859Cshot4.jpg" onclick="changeImage5(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171859v/171859Cshot6.jpg" onclick="changeImage5(this)"/>
+                        <img src="img/171859Cstandard.jpg" onclick="changeImage5(this)"/>
+                        <img src="img/171859Cshot2.jpg" onclick="changeImage5(this)"/>
+                        <img src="img/171859Cshot4.jpg" onclick="changeImage5(this)"/>
+                        <img src="img/171859Cshot6.jpg" onclick="changeImage5(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171859v/171859Cstandard.jpg" title="Converse x Keith Haring Run Star Hike High-Top
+                    <img src="img/171859Cstandard.jpg" title="Converse x Keith Haring Run Star Hike High-Top
                     SKU: 171859V
                     Chất liệu: Canvas
                     Giới tính: Men, Women
@@ -466,13 +526,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/164922c/164922JADE-STONE0.jpg" onclick="changeImage6(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/164922c/164922JADE-STONE3.jpg" onclick="changeImage6(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/164922c/164922JADE-STONE4.jpg" onclick="changeImage6(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/164922c/164922JADE-STONE2.jpg" onclick="changeImage6(this)"/>
+                        <img src="img/164922JADE-STONE0.jpg" onclick="changeImage6(this)"/>
+                        <img src="img/164922JADE-STONE3.jpg" onclick="changeImage6(this)"/>
+                        <img src="img/164922JADE-STONE4.jpg" onclick="changeImage6(this)"/>
+                        <img src="img/164922JADE-STONE2.jpg" onclick="changeImage6(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/164922c/164922JADE-STONE0.jpg" title="Chuck Taylor All Star Renew Canvas
+                    <img src="img/164922JADE-STONE0.jpg" title="Chuck Taylor All Star Renew Canvas
                     SKU: 164922C
                     Chất liệu: Textile
                     Giới tính: Men, Women
@@ -506,13 +566,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171243c/171243Cstandard.jpg" onclick="changeImage7(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171243c/171243Cshot6.jpg" onclick="changeImage7(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171243c/171243Cshot4.jpg" onclick="changeImage7(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171243c/171243Cshot3.jpg" onclick="changeImage7(this)"/>
+                        <img src="img/171243Cstandard.jpg" onclick="changeImage7(this)"/>
+                        <img src="img/171243Cshot6.jpg" onclick="changeImage7(this)"/>
+                        <img src="img/171243Cshot4.jpg" onclick="changeImage7(this)"/>
+                        <img src="img/171243Cshot3.jpg" onclick="changeImage7(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171243c/171243Cstandard.jpg" title="Converse x Chinatown Market x NBA Chuck 70 High-Top [Limited Edition]
+                    <img src="img/171243Cstandard.jpg" title="Converse x Chinatown Market x NBA Chuck 70 High-Top [Limited Edition]
                     SKU: 171243C
                     Chất liệu: Leather
                     Giới tính: Men
@@ -546,13 +606,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/162054c/SU18CHUCK70CHUCK70SUNFLOWER162054CLATERAL.jpg" onclick="changeImage8(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/162054c/SU18CHUCK70CHUCK70SUNFLOWER162054CTOE.jpg" onclick="changeImage8(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/162054c/162054C4.jpg" onclick="changeImage8(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/162054c/SU18CHUCK70CHUCK70SUNFLOWER162054CTOPDOWN.jpg" onclick="changeImage8(this)"/>
+                        <img src="img/SU18CHUCK70CHUCK70SUNFLOWER162054CLATERAL.jpg" onclick="changeImage8(this)"/>
+                        <img src="img/SU18CHUCK70CHUCK70SUNFLOWER162054CTOE.jpg" onclick="changeImage8(this)"/>
+                        <img src="img/162054C4.jpg" onclick="changeImage8(this)"/>
+                        <img src="img/SU18CHUCK70CHUCK70SUNFLOWER162054CTOPDOWN.jpg" onclick="changeImage8(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/162054c/SU18CHUCK70CHUCK70SUNFLOWER162054CLATERAL.jpg" title="Chuck 70 Sunflower High Top
+                    <img src="img/SU18CHUCK70CHUCK70SUNFLOWER162054CLATERAL.jpg" title="Chuck 70 Sunflower High Top
                     SKU: 162054C
                     Chất liệu: Canvas
                     Giới tính: Men, Women
@@ -589,13 +649,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170367c/170367standard.jpg" onclick="changeImage9(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170367c/170367shot4.jpg" onclick="changeImage9(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170367c/170367shot6.jpg" onclick="changeImage9(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170367c/170367shot1.jpg" onclick="changeImage9(this)"/>
+                        <img src="img/170367standard.jpg" onclick="changeImage9(this)"/>
+                        <img src="img/170367shot4.jpg" onclick="changeImage9(this)"/>
+                        <img src="img/170367shot6.jpg" onclick="changeImage9(this)"/>
+                        <img src="img/170367shot1.jpg" onclick="changeImage9(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170367c/170367standard.jpg" title="Chuck Taylor All Star Renew Sock Knit High Top
+                    <img src="img/170367standard.jpg" title="Chuck Taylor All Star Renew Sock Knit High Top
                     SKU: 170367C
                     Chất liệu: Polyester
                     Giới tính: Men, Women
@@ -629,13 +689,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170867c/170867Cstandard.jpg" onclick="changeImage10(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170867c/170867Cshot2.jpg" onclick="changeImage10(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170867c/170867Cshot4.jpg" onclick="changeImage10(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170867c/170867Cshot5.jpg" onclick="changeImage10(this)"/>
+                        <img src="img/170867Cstandard.jpg" onclick="changeImage10(this)"/>
+                        <img src="img/170867Cshot2.jpg" onclick="changeImage10(this)"/>
+                        <img src="img/170867Cshot4.jpg" onclick="changeImage10(this)"/>
+                        <img src="img/170867Cshot5.jpg" onclick="changeImage10(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170867c/170867Cstandard.jpg" title="Chuck 70 Explore a Better World High Top
+                    <img src="img/170867Cstandard.jpg" title="Chuck 70 Explore a Better World High Top
                     SKU: 170867C
                     Chất liệu: Polyester
                     Giới tính: Men, Women
@@ -675,13 +735,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/670171c/670171Cstandard.jpg" onclick="changeImage11(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/670171c/670171Cshot2.jpg" onclick="changeImage11(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/670171c/670171Cshot4.jpg" onclick="changeImage11(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/670171c/670171Cshot3.jpg" onclick="changeImage11(this)"/>
+                        <img src="img/670171Cstandard.jpg" onclick="changeImage11(this)"/>
+                        <img src="img/670171Cshot2.jpg" onclick="changeImage11(this)"/>
+                        <img src="img/670171Cshot4.jpg" onclick="changeImage11(this)"/>
+                        <img src="img/670171Cshot3.jpg" onclick="changeImage11(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/670171c/670171Cstandard.jpg" title="Chuck Taylor All Star Gamer Low-Top
+                    <img src="img/670171Cstandard.jpg" title="Chuck Taylor All Star Gamer Low-Top
                     SKU: 670171C
                     Chất liệu: Canvas
                     Giới tính: Kids
@@ -715,13 +775,13 @@
             <div class="tour">
                 <div class="img-big">
                 <div class="img-small">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/665392c/665392C1-1.jpg" onclick="changeImage12(this)"/>
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/665392c/665392Cshot2.jpg" onclick="changeImage12(this)"/>
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/665392c/665392Cshot4.jpg" onclick="changeImage12(this)"/>
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/665392c/665392Cshot5.jpg" onclick="changeImage12(this)"/>
+                    <img src="img/665392C1-1.jpg" onclick="changeImage12(this)"/>
+                    <img src="img/665392Cshot2.jpg" onclick="changeImage12(this)"/>
+                    <img src="img/665392Cshot4.jpg" onclick="changeImage12(this)"/>
+                    <img src="img/665392Cshot5.jpg" onclick="changeImage12(this)"/>
                 </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/665392c/665392C1-1.jpg" title="Chuck Taylor All Star Interstellar Dino’s
+                    <img src="img/665392C1-1.jpg" title="Chuck Taylor All Star Interstellar Dino’s
                     SKU: 665392C
                     Chất liệu: Canvas
                     Giới tính: Kids
@@ -758,13 +818,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/327444c/327444C-1.jpg" onclick="changeImage13(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/327444c/327444C-3.jpg" onclick="changeImage13(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/327444c/327444C-4.jpg" onclick="changeImage13(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/327444c/327444C-5.jpg" onclick="changeImage13(this)"/>
+                        <img src="img/327444C-1.jpg" onclick="changeImage13(this)"/>
+                        <img src="img/327444C-3.jpg" onclick="changeImage13(this)"/>
+                        <img src="img/327444C-4.jpg" onclick="changeImage13(this)"/>
+                        <img src="img/327444C-5.jpg" onclick="changeImage13(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/327444c/327444C-1.jpg" title="Chuck Taylor Classic Kids Low Top
+                    <img src="img/327444C-1.jpg" title="Chuck Taylor Classic Kids Low Top
                     SKU: 327444C
                     Chất liệu: Canvas
                     Giới tính: Kids
@@ -798,13 +858,13 @@
             <div class="tour">
                 <div class="img-big">
                     <div class="img-small">
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/758190v/758190standard.jpg" onclick="changeImage14(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/758190v/758190shot2.jpg" onclick="changeImage14(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/758190v/758190shot3.jpg" onclick="changeImage14(this)"/>
-                        <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/758190v/758190shot4.jpg" onclick="changeImage14(this)"/>
+                        <img src="img/758190standard.jpg" onclick="changeImage14(this)"/>
+                        <img src="img/758190shot2.jpg" onclick="changeImage14(this)"/>
+                        <img src="img/758190shot3.jpg" onclick="changeImage14(this)"/>
+                        <img src="img/758190shot4.jpg" onclick="changeImage14(this)"/>
                     </div>
                 <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/758190v/758190standard.jpg" title="Chuck Taylor All Star Creatures Boston x London Transport
+                    <img src="img/758190standard.jpg" title="Chuck Taylor All Star Creatures Boston x London Transport
                     SKU: 758190V
                     Chất liệu: Canvas
                     Giới tính: Kids
@@ -861,8 +921,8 @@
           </div>
         </div>
       </section>
-        <div>
-            <a href="#top" class="icon"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
-        </div>
+      <div>
+        <a id="gototop" href="javascript:;"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
+      </div>
 </body>
 </html>

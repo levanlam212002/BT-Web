@@ -42,6 +42,12 @@ ul.menu > li > a:hover{
 ul.menu{
     justify-content:center;
 }
+ul.menu > li img{
+    padding-top: 20px;
+}
+ul.menu > li:first-child{
+    display: none;
+}
 div.converse{
     text-align: center;
 }
@@ -63,17 +69,21 @@ div.items{
     color: white;
     padding: 2%;
 }
-.icon{
+a#gototop{
+    text-decoration: none;
     display:block;
-    position:fixed;
+    position: fixed;
     bottom:1%;
     right:2%;
     color: rgb(53, 51, 51);
+    z-index: 999;
+    
 }
-.icon:hover{
+a#gototop:hover{
     background-color: rgb(11, 12, 12);
     color: white;
-}
+    border-radius: 50%;
+ }
 a.iconfb{
     color:rgb(127, 129, 133);
 }
@@ -169,7 +179,7 @@ h1{
      div.item{
          display: none;
      }
-     .icon{
+    a#gototop{
         font-size: 10px;
     }
     div.forms{

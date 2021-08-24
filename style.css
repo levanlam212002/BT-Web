@@ -7,7 +7,7 @@
     justify-content: center;
  }
  div.text-center{
-     padding:1%;
+     padding:1.174%;
  }
  .text-center a{
      display: none;
@@ -27,10 +27,11 @@ ul.menu{
 ul.menu > li > a{
     text-decoration: none;
     display: block;
-    padding:8.5%;
+    padding:8.58%;
     color: white;
     font-size: 120%;
     text-align: center;
+    font-family:'Times New Roman';
 }
 ul.menu > li{
     width: 15%;
@@ -44,6 +45,12 @@ ul.menu{
 }
 ul.menu:last-child{
     color: white;
+}
+ul.menu > li img{
+    padding-top: 20px;
+}
+ul.menu > li:first-child{
+    display: none;
 }
 div.item{
     position: relative;
@@ -59,17 +66,21 @@ div.items{
     color: white;
     padding: 2%;
 }
-.icon{
+a#gototop{
+    text-decoration: none;
     display:block;
-    position:fixed;
+    position: fixed;
     bottom:1%;
     right:2%;
     color: rgb(53, 51, 51);
+    z-index: 999;
+    
 }
-.icon:hover{
+a#gototop:hover{
     background-color: rgb(11, 12, 12);
     color: white;
-}
+    border-radius: 50%;
+ }
 hr{
     width: 60%;
     color:rgb(78, 77, 77);
@@ -241,7 +252,7 @@ p{
     div.item{
         display: none;
     }
-    .icon{
+    a#gototop{
         font-size: 10px;
     }
     div.cmt div{
@@ -283,11 +294,15 @@ div.form-1{
 div.images{
     width: 50%;
 }
-div.content-cmt button{
+div.content-cmt1 button{
     padding: 14px;
     background-color: black;
     color: white;
 }
 div.content-cmt{
+    display: flex;
+    flex-direction: column;
+}
+div.content-cmt1{
     display: flex;
 }

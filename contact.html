@@ -10,11 +10,68 @@
     <script src="index.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("#gototop").hide();
+
+        $(window).scroll(function(){
+            if($(this).scrollTop() >= 100)
+              $("#gototop").show("slow")
+            else
+              $("#gototop").hide("slow")
+            if($(this).scrollTop() >= 100)
+            {
+              $("nav").css({
+                "position" : "fixed",
+                "left":0,
+                "top":0,
+                "right":0,
+                "z-index":99             
+               })
+              $("#logo").show("slow")
+            }
+            else{
+              $("nav").css({
+                "position" : "relative"            
+               })
+              $("#logo").hide("slow")
+            }
+            if ($(this).width() <= 415) {
+              $("nav").css({
+                "display": "none"            
+               })
+               if($(this).scrollTop()>= 80)
+               {
+               $("#logo1").css({
+                "position" : "fixed",
+                "left":0,
+                "top":0,
+                "right":0,
+                "z-index":99 
+               })
+              }
+              else{
+              $("#logo1").css({
+                "position" : "relative"          
+               })
+            }
+            }
+        })
+        $("#gototop").click(function(){
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1000);
+        })
+
+      })
+    </script>
 </head>
-<body name="top">
-  <div class="logo">
+<body>
+  <div class="logo" id="logo1">
     <div class="text-center">
-      <img src="https://www.converse.com.vn/pictures/catalog/logo/newlogo-160x30.png" alt="Converse"/>
+      <img src="img/newlogo-160x30.png" alt="Converse"/>
     </div>
     <ul class="text-center subs">
       <a href="#"><i class="fas fa-bars fa-2x"></i></a>
@@ -39,6 +96,9 @@
   </div>
   <nav>
     <ul class = "menu">
+        <li id="logo">
+            <img src="img/newlogo-160x30.png" alt="Converse"/>
+        </li>
         <li>
             <a href="index.html">TRANG CHỦ</a>
         </li>
@@ -56,7 +116,7 @@
           </li>
     </ul>
 </nav>
-    <img src="https://www.converse.com.vn/pictures/catalog/banner/men/womenasscessories.jpg" style="width:100%"/>
+    <img src="img/womenasscessories.jpg" style="width:100%"/>
     <div class="blog-title">
         <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
     </div>
@@ -143,7 +203,7 @@
       </div>
     </section>
     <div>
-        <a href="#top" class="icon"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
+      <a id="gototop" href="javascript:;"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
     </div>
 </body>
 </html>

@@ -8,11 +8,69 @@
     <link rel="SHORTCUT ICON" href="https://www.converse.com.vn/catalog/view/theme/default/images/favicon.ico">
     <link href="blog.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("#gototop").hide();
+
+        $(window).scroll(function(){
+            if($(this).scrollTop() >= 100)
+              $("#gototop").show("slow")
+            else
+              $("#gototop").hide("slow")
+            if($(this).scrollTop() >= 100)
+            {
+              $("nav").css({
+                "position" : "fixed",
+                "left":0,
+                "top":0,
+                "right":0,
+                "z-index":99             
+               })
+              $("#logo").show("slow")
+            }
+            else{
+              $("nav").css({
+                "position" : "relative"            
+               })
+              $("#logo").hide("slow")
+            }
+            if ($(this).width() <= 415) {
+              $("nav").css({
+                "display": "none"            
+               })
+               if($(this).scrollTop()>= 80)
+               {
+               $("#logo1").css({
+                "position" : "fixed",
+                "left":0,
+                "top":"4px",
+                "right":0,
+                "z-index":99 
+               })
+              }
+              else{
+              $("#logo1").css({
+                "position" : "relative", 
+                "top":0           
+               })
+            }
+            }
+        })
+        $("#gototop").click(function(){
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1000);
+        })
+
+      })
+    </script>
 </head>
-<body name="top">
-  <div class="logo">
+<body>
+  <div class="logo" id="logo1">
     <div class="text-center">
-      <img src="https://www.converse.com.vn/pictures/catalog/logo/newlogo-160x30.png" alt="Converse"/>
+      <img src="img/newlogo-160x30.png" alt="Converse"/>
     </div>
     <ul class="text-center subs">
       <a href="#"><i class="fas fa-bars fa-2x"></i></a>
@@ -37,6 +95,9 @@
   </div>
   <nav>
     <ul class = "menu">
+        <li id="logo">
+            <img src="img/newlogo-160x30.png" alt="Converse"/>
+        </li>
         <li>
             <a href="index.html">TRANG CHỦ</a>
         </li>
@@ -58,37 +119,37 @@
         <hr/>
         <div class="storys">
           <div class="story">
-              <img src="https://www.converse.com.vn/pictures/catalog/news/fashion/2021/pride-su21/01-thumb.jpg"/>
+              <img src="img/01-thumb.jpg"/>
           </div>
           <div class="story">
             <h3>TRẢI NGHIỆM CON ĐƯỜNG MÀU SẮC ĐẦY HOA DÀI VÔ TẬN CỦA CONVERSE PRIDE</h3>
             <p>Tuy được ra mắt muộn hơn so với thời điểm phù hợp là tháng 6. Nhưng có vẫn tốt hơn là không, Converse VN vẫn mang về Converse Pride cho thị trường Việt nhằm khẳng định sự tôn vinh đa dạng vốn có của xã hội với gam màu 7 sắc cầu vồng. Một bảng màu thể hiện sự tích cực.</p>
           </div>
           <div class="story">
-            <img src="https://www.converse.com.vn/pictures/catalog/news/fashion/2021/pride-su21/02.jpg"/>
+            <img src="img/02.jpg"/>
           </div>
           <div class="story">
             <p>Mỗi người đều có chuyến đi riêng đề tìm ra sự tự hào của riêng mình và sau các mùa, Converse Pride lần này khai thác 5 mẩu chuyện đến từ các thành viên cộng đồng All Stars đến từ khắp nơi trên thế giới và cũng là thành viên cộng đồng LGBTQIA+, trong đó có Hoàng (@hoangmabuu) – 1 thành viên từ cộng đồng All Stars Việt Nam. Từ đó BST được thừa hưởng sự tích cực và lấy cảm hứng để mang trên mình những graphic thể hiện hành trình tìm đến bản thân mình.</p>
           </div>
           <div class="story">
-            <img src="https://www.converse.com.vn/pictures/catalog/news/fashion/2021/pride-su21/08.jpg"/>
+            <img src="img/08.jpg"/>
           </div>
           <div class="story">
             <p>Những họa tiết là đại diện của chủ đề chung của cuộc đấu tranh tìm kiếm một niềm tự hào đặc biệt, một cảm giác vui vẻ, tự do khi là chính màu sắc mình muốn. Một ý nghĩa tôn vinh sự đa dạng về nhiều góc độ ý nghĩa, phương diện của xã hội cũng như cho thấy điều mới mẻ, màu sắc sau những thời gian ảm đạm.</p>
           </div>
           <div class="story">
-            <img src="https://www.converse.com.vn/pictures/catalog/news/fashion/2021/pride-su21/07.jpg"/>
+            <img src="img/07.jpg"/>
           </div>
           <div class="story">
             <p>Với Converse, Pride sẽ luôn là một trong những chủ đề gắn kết với BST của riêng họ hằng năm. BST Converse Pride sẽ lên kệ tại các cửa hàng Converse VN và đại lý phân phối cấp cao Sneaker Buzz tại TP.Hà Nội vào ngày 15/07 với giá bán lẻ từ 1,500,000 VNĐ.</p>
           </div>
           <div class="story">
-            <img src="https://www.converse.com.vn/pictures/catalog/news/fashion/2021/pride-su21/09.jpg"/>
+            <img src="img/09.jpg"/>
           </div>
         </div>
         <hr/>
     <div class="img">
-      <img src="https://converse.com.vn/pictures/catalog/about/img-title.jpg"/>
+      <img src="img/img-title.jpg"/>
     </div>
     <div class="content">
       <p>Chào mừng bạn đến với ngôi nhà Converse! Tại đây, mỗi một dòng chữ, mỗi chi tiết và hình ảnh đều là những bằng chứng mang dấu ấn lịch sử Converse 100 năm, và đang không ngừng phát triển lớn mạnh. Tất cả các thành tựu đáng tự hào của Converse đều không thể tách rời bởi 4 dòng sản phẩm kinh điển: Chuck Taylor All Star, Star Chevron, Jack Purcell và One Star. Trong tất cả các lĩnh vực như âm nhạc, thể thao, nghệ thuật và trào lưu thời trang, mỗi dòng sản phẩm này đều có một vị trí mang tính ảnh hưởng nhất định, như đang truyền tải một thông điệp “Tinh thần sáng tạo mà Converse đang theo đuổi là vô tận, là sự biến hóa không giới hạn". Mọi người đều có một lịch sử – như một câu chuyện trong đó ghi lại những điều họ đã trải nghiệm. Lịch sử Converse cũng vậy, nhưng đây lại là một loạt các câu chuyện rất cool, đã dẫn đắt một thương hiệu đi đến ngày hôm nay và trở thành phương hướng cho tương lai của một nhãn hiệu. Khi nói đến một con người hay một sự việc, chúng ta đều nhận thức được rằng, tầm quan trọng không phải về bề dày lịch sử, hay được bao nhiêu tuổi mà chính là những thành tựu làm được mới là điều mọi người quan tâm. Sau đây là một câu chuyện về chúng tôi – thương hiệu Converse – câu chuyện mà mọi người sẽ cảm thấy thú vị và yêu thích nó.</p>
@@ -168,41 +229,21 @@
     <hr/>
     <div class="posts">
     <div class="post">
-      <div>
-        <a href="https://converse.com.vn/news/fashion/bat-tay-cung-hai-nhan-streetwear-lon-tho-miffy-xuat-hien-trong-hanh-trinh-doi-moi-cho-van-hoa-truot-van.html">1. BẮT TAY CÙNG HAI NHÃN STREETWEAR LỚN, THỎ MIFFY XUẤT HIỆN TRONG HÀNH TRÌNH ĐỔI MỚI CHO VĂN HÓA TRƯỢT VÁN</a>
-      </div>
-     <div>
-      <a href="https://converse.com.vn/news/fashion/converse-x-kim-jones.html">2. CONVERSE X KIM JONES</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/converse-renew-crater-va-su-chuyen-doi-phat-trien-voi-ben-vung.html">3. CONVERSE RENEW CRATER VÀ SỰ CHUYỂN ĐỔI PHÁT TRIỂN VỚI BỀN VỮNG</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/converse-x-chinatown-market-x-nba-dinh-ra-sao-doi-voi-cac-fan-cua-san-choi-nay.html">4. CONVERSE X CHINATOWN MARKET X NBA ĐỈNH RA SAO ĐỐI VỚI CÁC FAN CỦA SÂN CHƠI NÀY?</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/mot-dang-cap-moi-khi-nghe-thuat-patchwork-ket-hop-voi-streetwear.html">5. MỘT ĐẲNG CẤP MỚI KHI NGHỆ THUẬT “PATCHWORK” KẾT HỢP VỚI STREETWEAR</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/phoi-mau-tot-va-phoi-cau-chuyen-cung-can-kheo-la-cach-converse-dang-mang-lai-trong-my-story-83-nam-nay.html">6. PHỐI MÀU TỐT VÀ PHỐI CÂU CHUYỆN CŨNG CẦN KHÉO LÀ CÁCH CONVERSE ĐANG MANG LẠI TRONG MY STORY 8/3 NĂM NAY</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/converse-huong-ung-valentine-nhu-the-nao-voi-thiet-ke-mua-spring-21.html">7. CONVERSE HƯỞNG ỨNG VALENTINE NHƯ THẾ NÀO VỚI THIẾT KẾ MÙA SPRING 21?</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/converse-cx-digital-terrain-va-su-buc-pha-khoi-vung-an-toan-cua-converse.html">8. CONVERSE CX DIGITAL TERRAIN VÀ SỰ BỨC PHÁ KHỎI VÙNG AN TOÀN CỦA CONVERSE</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/mot-dien-bien-moi-cho-chuck-70-va-chuyen-di-buc-pha-gioi-han.html">9. MỘT DIỄN BIẾN MỚI CHO CHUCK 70 VÀ CHUYẾN ĐI BỨC PHÁ GIỚI HẠN</a>
-     </div>
-     <div>
-       <a href="https://converse.com.vn/news/fashion/converse-x-layzhang--su-gan-ket-giua-nghe-thuat-truyen-thong-va-hien-dai.html">10. CONVERSE X LAYZHANG – SỰ GẮN KẾT GIỮA NGHỆ THUẬT TRUYỀN THỐNG VÀ HIỆN ĐẠI</a>
-     </div>
+      <a href="https://converse.com.vn/news/fashion/bat-tay-cung-hai-nhan-streetwear-lon-tho-miffy-xuat-hien-trong-hanh-trinh-doi-moi-cho-van-hoa-truot-van.html">1. BẮT TAY CÙNG HAI NHÃN STREETWEAR LỚN, THỎ MIFFY XUẤT HIỆN TRONG HÀNH TRÌNH ĐỔI MỚI CHO VĂN HÓA TRƯỢT VÁN</a><br/>
+      <a href="https://converse.com.vn/news/fashion/converse-x-kim-jones.html">2. CONVERSE X KIM JONES</a><br/>
+      <a href="https://converse.com.vn/news/fashion/converse-renew-crater-va-su-chuyen-doi-phat-trien-voi-ben-vung.html">3. CONVERSE RENEW CRATER VÀ SỰ CHUYỂN ĐỔI PHÁT TRIỂN VỚI BỀN VỮNG</a><br/>
+      <a href="https://converse.com.vn/news/fashion/converse-x-chinatown-market-x-nba-dinh-ra-sao-doi-voi-cac-fan-cua-san-choi-nay.html">4. CONVERSE X CHINATOWN MARKET X NBA ĐỈNH RA SAO ĐỐI VỚI CÁC FAN CỦA SÂN CHƠI NÀY?</a><br/>
+      <a href="https://converse.com.vn/news/fashion/mot-dang-cap-moi-khi-nghe-thuat-patchwork-ket-hop-voi-streetwear.html">5. MỘT ĐẲNG CẤP MỚI KHI NGHỆ THUẬT “PATCHWORK” KẾT HỢP VỚI STREETWEAR</a><br/>
+      <a href="https://converse.com.vn/news/fashion/phoi-mau-tot-va-phoi-cau-chuyen-cung-can-kheo-la-cach-converse-dang-mang-lai-trong-my-story-83-nam-nay.html">6. PHỐI MÀU TỐT VÀ PHỐI CÂU CHUYỆN CŨNG CẦN KHÉO LÀ CÁCH CONVERSE ĐANG MANG LẠI TRONG MY STORY 8/3 NĂM NAY</a><br/>
+      <a href="https://converse.com.vn/news/fashion/converse-huong-ung-valentine-nhu-the-nao-voi-thiet-ke-mua-spring-21.html">7. CONVERSE HƯỞNG ỨNG VALENTINE NHƯ THẾ NÀO VỚI THIẾT KẾ MÙA SPRING 21?</a><br/>
+      <a href="https://converse.com.vn/news/fashion/converse-cx-digital-terrain-va-su-buc-pha-khoi-vung-an-toan-cua-converse.html">8. CONVERSE CX DIGITAL TERRAIN VÀ SỰ BỨC PHÁ KHỎI VÙNG AN TOÀN CỦA CONVERSE</a><br/>
+      <a href="https://converse.com.vn/news/fashion/mot-dien-bien-moi-cho-chuck-70-va-chuyen-di-buc-pha-gioi-han.html">9. MỘT DIỄN BIẾN MỚI CHO CHUCK 70 VÀ CHUYẾN ĐI BỨC PHÁ GIỚI HẠN</a><br/>
+      <a href="https://converse.com.vn/news/fashion/converse-x-layzhang--su-gan-ket-giua-nghe-thuat-truyen-thong-va-hien-dai.html">10. CONVERSE X LAYZHANG – SỰ GẮN KẾT GIỮA NGHỆ THUẬT TRUYỀN THỐNG VÀ HIỆN ĐẠI</a><br/>
     </div>
     <div class = "post-img">
       <img src="post-img.jpg"/>
     </div>
-  </div>
+    </div>
     <section>
       <div class="items">
         <div class="item">
@@ -225,7 +266,7 @@
       </div>
     </section>
     <div>
-            <a href="#top" class="icon"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
+      <a id="gototop" href="javascript:;"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
     </div>
 </body>
 </html>

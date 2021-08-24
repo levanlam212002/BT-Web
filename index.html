@@ -10,11 +10,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("#gototop").hide();
+
+        $(window).scroll(function(){
+            if($(this).scrollTop() >= 100)
+              $("#gototop").show("slow")
+            else
+              $("#gototop").hide("slow")
+            if($(this).scrollTop() >= 100)
+            {
+              $("nav").css({
+                "position" : "fixed",
+                "left":0,
+                "top":0,
+                "right":0,
+                "z-index":99             
+               })
+              $("#logo").show("slow")
+            }
+            else{
+              $("nav").css({
+                "position" : "relative"            
+               })
+              $("#logo").hide("slow")
+            }
+            if ($(this).width() <= 415) {
+              $("nav").css({
+                "display": "none"            
+               })
+               if($(this).scrollTop()>= 80)
+               {
+               $("#logo1").css({
+                "position" : "fixed",
+                "left":0,
+                "top":0,
+                "right":0,
+                "z-index":99 
+               })
+              }
+              else{
+              $("#logo1").css({
+                "position" : "relative"          
+               })
+            }
+            }
+        })
+        $("#gototop").click(function(){
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1000);
+        })
+
+      })
+    </script>
 </head>
-<body name = "top">
-  <div class="logo">
+<body>
+  <div class="logo" id ="logo1">
   <div class="text-center">
-    <img src="https://www.converse.com.vn/pictures/catalog/logo/newlogo-160x30.png" alt="Converse"/>
+    <img src="img/newlogo-160x30.png" alt="Converse"/>
   </div>
   <ul class="text-center subs">
     <a href="#"><i class="fas fa-bars fa-2x"></i></a>
@@ -39,6 +96,9 @@
   </div>
   <nav>
     <ul class = "menu">
+        <li id="logo">
+            <img src="img/newlogo-160x30.png" alt="Converse"/>
+        </li>
         <li>
             <a href="index.html">TRANG CHỦ</a>
         </li>
@@ -55,20 +115,20 @@
             <a href="payment.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a>
           </li>
     </ul>
-</nav>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </nav>
+    <script src="jquery-3.6.0.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-interval="2000">
-                    <img src="https://www.converse.com.vn/pictures/catalog/home/slide-homepage/Chuck-70-banner-web-grid-wall.jpg" class="d-block w-100"/>
+                    <img src="Chuck-70-banner-web-grid-wall.jpg" class="d-block w-100"/>
                   </div>
                   <div class="carousel-item" data-interval="2000">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/about.jpg" class="d-block w-100"/>
+                    <img src="about.jpg" class="d-block w-100"/>
                   </div>
                   <div class="carousel-item" data-interval="2000">
-                    <img src="https://www.converse.com.vn/pictures/catalog/home/slide-homepage/SP21ValentinesDay-GridwallDesktop.jpg" class="d-block w-100"/>
+                    <img src="/SP21ValentinesDay-GridwallDesktop.jpg" class="d-block w-100"/>
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -89,7 +149,7 @@
             </script>
             <div class="fashions">
               <div class="fashion wow bounceInRight" data-wow-delay="1s">
-              <img src="https://www.converse.com.vn/pictures/catalog/news/events/2020/all-stars/01-thumb.jpg"/>
+              <img src="01-thumb (1).jpg"/>
               </div>
               <div class="content wow bounceInRight" data-wow-delay="2s">
               <h4>CONVERSE TIẾP TỤC NHÂN RỘNG SỨC ẢNH HƯỞNG BẰNG CHIẾN LƯỢC CỘNG ĐỒNG CÙNG CÁC THÀNH VIÊN SÁNG TẠO “ALL-STARS” SÁNG GIÁ</h4>
@@ -118,7 +178,7 @@
               <div class="news">
                 <div class="new">
                   <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171478v/171478Cstandard.jpg" title="Chuck 70 Low Top
+                    <img src="img/171478Cstandard.jpg" title="Chuck 70 Low Top
                     SKU: 171478V 
                     Chất liệu: Polyester Canvas 
                     Giới tính: Women, Men
@@ -133,7 +193,7 @@
                 </div>
                 <div class="new">
                   <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171479v/171479Cstandard.jpg" title="Chuck 70 Low Top
+                    <img src="img/171479Cstandard.jpg" title="Chuck 70 Low Top
                     SKU: 171479V
                     Chất liệu: Polyester Canvas
                     Giới tính: Women, Men
@@ -148,7 +208,7 @@
                 </div>
                 <div class="new">
                   <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/171859v/171859Cstandard.jpg" title="Converse x Keith Haring Run Star Hike High-Top
+                    <img src="img/171859Cstandard.jpg" title="Converse x Keith Haring Run Star Hike High-Top
                     SKU: 171859V
                     Chất liệu: Canvas
                     Giới tính: Men, Women
@@ -163,7 +223,7 @@
                 </div>
                 <div class="new">
                   <div class="img">
-                    <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/665392c/665392C1-1.jpg" title="Chuck Taylor All Star Interstellar Dino’s
+                    <img src="img/665392C1-1.jpg" title="Chuck Taylor All Star Interstellar Dino’s
                     SKU: 665392C
                     Chất liệu: Canvas
                     Giới tính: Kids
@@ -183,7 +243,7 @@
             <div class="hots">
               <div class="hot">
                 <div class="img">
-                  <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170804c/170804Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
+                  <img src="img/170804Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
                   SKU: 170804C
                   Chất liệu: Canvas
                   Giới tính: Women, Men
@@ -195,7 +255,7 @@
               </div>
               <div class="hot">
                 <div class="img">
-                  <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/170801c/170801Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
+                  <img src="img/170801Cstandard.jpg" title="Chuck 70 Archive Paint Splatter High Top
                   SKU: 170801C
                   Chất liệu: Canvas
                   Giới tính: Women, Men
@@ -207,7 +267,7 @@
               </div>
               <div class="hot">
                 <div class="img">
-                  <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/chuck-taylor-all-star/164922c/164922JADE-STONE0.jpg" title="Chuck Taylor All Star Renew Canvas
+                  <img src="img/164922JADE-STONE0.jpg" title="Chuck Taylor All Star Renew Canvas
                   SKU: 164922C
                   Chất liệu: Textile
                   Giới tính: Men, Women
@@ -219,7 +279,7 @@
               </div>
               <div class="hot">
                 <div class="img">
-                  <img src="https://www.converse.com.vn/pictures/catalog/products/sneakers/2021/ctas/670171c/670171Cstandard.jpg" title="Chuck Taylor All Star Gamer Low-Top
+                  <img src="img/670171Cstandard.jpg" title="Chuck Taylor All Star Gamer Low-Top
                   SKU: 670171C
                   Chất liệu: Canvas
                   Giới tính: Kids
@@ -276,7 +336,7 @@
                 <div class="avt">
                   <img src="avt4.jfif"/>
                 </div>
-                <div class="content-cmt">
+                <div class="content-cmt1">
                   <textarea rows="2" cols="60" placeholder="Bình luận"></textarea>
                   <button><i class="fas fa-long-arrow-alt-right"></i></button>
                 </div>
@@ -303,9 +363,9 @@
                     <a href="https://www.instagram.com/vanlam_2002/" target="blank" class="iconins"><i class="fab fa-instagram fa-2x"></i></i></a>
                 </div>
               </div>
-            </section>
-    <div class="top"> 
-      <a href="#top" class="icon"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
-    </div>
+            </section> 
+            <div>
+              <a id="gototop" href="javascript:;"><i class="fas fa-arrow-alt-circle-up fa-3x"></i></a>
+            </div>
 </body>
 </html>
