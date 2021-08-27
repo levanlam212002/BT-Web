@@ -1,3 +1,4 @@
+
  div.logo{
     list-style-type: none;
     padding:0;
@@ -138,11 +139,12 @@ div.fashion img{
 div.news{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 div.new{
     background-color: rgb(233, 230, 230);
     border-radius: 5%;
-    width: 48%;
+    width: 40%;
     margin: 1%;
     position: relative;
 }
@@ -188,9 +190,10 @@ div.img{
 div.hots{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 div.hot{
-    width: 48%;
+    width: 40%;
     margin: 1%;
     position: relative;
 }
