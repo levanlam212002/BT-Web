@@ -17,10 +17,30 @@
         $("#gototop").hide();
 
         $(window).scroll(function(){
+            if($(this).scrollTop() >= 20)
+              $("#fashion").show("slow")
+            else
+              $("#fashion").hide("slow")
             if($(this).scrollTop() >= 100)
               $("#gototop").show("slow")
             else
               $("#gototop").hide("slow")
+            if($(this).scrollTop() >= 1350)
+              $("#inf").show("slow")
+            else
+              $("#inf").hide("slow")
+            if($(this).scrollTop() >= 1940)
+              $("#new").show("slow")
+            else
+              $("#new").hide("slow")
+            if($(this).scrollTop() >= 3115)
+              $("#hot").show("slow")
+            else
+              $("#hot").hide("slow")
+            if($(this).scrollTop() >= 4100)
+              $("#cmt").show("slow")
+            else
+              $("#cmt").hide("slow")
             if($(this).scrollTop() >= 100)
             {
               $("nav").css({
@@ -141,7 +161,7 @@
                 </a>
             </div>
             <hr/>
-            <h1>FASHION</h1>
+            <h1 id="fashion">FASHION</h1>
             <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
             <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
             <script>
@@ -173,7 +193,12 @@
               </div>
             </div>
             <hr/>
-            <h1>NEW</h1>
+            <h1 id="inf">GIỚI THIỆU</h1>
+            <div class="video">
+              <iframe width="750" height="450" src="https://www.youtube.com/embed/pxcZea2-RtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <hr/>
+            <h1 id="new">SẢN PHẨM MỚI NHẤT</h1>
             <section>
               <div class="news">
                 <div class="new">
@@ -239,7 +264,7 @@
               </div>
             </section>
             <hr/>
-            <h1>SẢN PHẨM BÁN CHẠY NHẤT</h1>
+            <h1 id="hot">SẢN PHẨM BÁN CHẠY NHẤT</h1>
             <div class="hots">
               <div class="hot">
                 <div class="img">
@@ -291,9 +316,9 @@
               </div>
             </div>
             <hr/>
-            <h1>BÌNH LUẬN</h1>
+            <h1 id="cmt">BÌNH LUẬN</h1>
             <div class="cmt">
-              <div class="images">
+              <div class="images"> 
               <img src="converse6.jpg"/>
               </div>
               <div class="form-1">
@@ -343,10 +368,6 @@
                 </div>
               </div>
             </div>
-            </div>
-            <hr/>
-            <div class="video">
-              <iframe width="750" height="450" src="https://www.youtube.com/embed/pxcZea2-RtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <section>
               <div class="items">
