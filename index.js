@@ -119,3 +119,4 @@ function zoomImg(obj){
      document.getElementById('lightbox').style.display = 'none';
     }
 }
+

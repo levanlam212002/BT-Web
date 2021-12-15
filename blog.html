@@ -166,6 +166,42 @@
 
       })
     </script>
+    <script>
+      var count1 = 1;
+      var count2 = 2;
+      var count3 = 3;
+      var count4 = 4;
+      var count5 = 0;
+         changeImg = function(){ 
+           var imgs = ["img/01-thumb.jpg","img/02.jpg","img/08.jpg","img/07.jpg","img/09.jpg"];
+           document.getElementById("imgs1").src = imgs[count1];
+           count1++;
+           document.getElementById("imgs2").src = imgs[count2];
+           count2++;
+           document.getElementById("imgs3").src = imgs[count3];
+           count3++;
+           document.getElementById("imgs4").src = imgs[count4];
+           count4++;
+           document.getElementById("imgs5").src = imgs[count5];
+            count5++;
+              if(count1 > 4 ) {
+                count1= 0;
+              }
+              if(count2 > 4 ) {
+                count2= 0;
+              }
+              if(count3 > 4 ) {
+                count3= 0;
+              }
+              if(count4 > 4 ) {
+                count4= 0;
+              }
+              if(count5 > 4 ) {
+                count5= 0;
+              }
+            }
+          setInterval(changeImg, 2000)
+    </script>
 </head>
 <body>
   <div class="logo" id="logo1">
@@ -219,32 +255,32 @@
         <hr/>
         <div class="storys">
           <div class="story">
-              <img src="img/01-thumb.jpg"/>
+              <img src="img/01-thumb.jpg" id="imgs1"/>
           </div>
           <div class="story">
             <h3>TRẢI NGHIỆM CON ĐƯỜNG MÀU SẮC ĐẦY HOA DÀI VÔ TẬN CỦA CONVERSE PRIDE</h3>
             <p>Tuy được ra mắt muộn hơn so với thời điểm phù hợp là tháng 6. Nhưng có vẫn tốt hơn là không, Converse VN vẫn mang về Converse Pride cho thị trường Việt nhằm khẳng định sự tôn vinh đa dạng vốn có của xã hội với gam màu 7 sắc cầu vồng. Một bảng màu thể hiện sự tích cực.</p>
           </div>
           <div class="story">
-            <img src="img/02.jpg"/>
+            <img src="img/02.jpg" id="imgs2"/>
           </div>
           <div class="story">
             <p>Mỗi người đều có chuyến đi riêng đề tìm ra sự tự hào của riêng mình và sau các mùa, Converse Pride lần này khai thác 5 mẩu chuyện đến từ các thành viên cộng đồng All Stars đến từ khắp nơi trên thế giới và cũng là thành viên cộng đồng LGBTQIA+, trong đó có Hoàng (@hoangmabuu) – 1 thành viên từ cộng đồng All Stars Việt Nam. Từ đó BST được thừa hưởng sự tích cực và lấy cảm hứng để mang trên mình những graphic thể hiện hành trình tìm đến bản thân mình.</p>
           </div>
           <div class="story">
-            <img src="img/08.jpg"/>
+            <img src="img/08.jpg" id="imgs3"/>
           </div>
           <div class="story">
             <p>Những họa tiết là đại diện của chủ đề chung của cuộc đấu tranh tìm kiếm một niềm tự hào đặc biệt, một cảm giác vui vẻ, tự do khi là chính màu sắc mình muốn. Một ý nghĩa tôn vinh sự đa dạng về nhiều góc độ ý nghĩa, phương diện của xã hội cũng như cho thấy điều mới mẻ, màu sắc sau những thời gian ảm đạm.</p>
           </div>
           <div class="story">
-            <img src="img/07.jpg"/>
+            <img src="img/07.jpg" id="imgs4"/>
           </div>
           <div class="story">
             <p>Với Converse, Pride sẽ luôn là một trong những chủ đề gắn kết với BST của riêng họ hằng năm. BST Converse Pride sẽ lên kệ tại các cửa hàng Converse VN và đại lý phân phối cấp cao Sneaker Buzz tại TP.Hà Nội vào ngày 15/07 với giá bán lẻ từ 1,500,000 VNĐ.</p>
           </div>
           <div class="story">
-            <img src="img/09.jpg"/>
+            <img src="img/09.jpg" id="imgs5"/>
           </div>
         </div>
         <hr/>

@@ -13,6 +13,29 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function(){
+    $('#btnAdd').click(function(){
+        var ten = $("#ten").val()
+        var phone = $("#phoneId").val()
+        var option = $("#optionId").val()
+
+        $("div.order-bot").prepend(`
+        <div class="order-item active ">
+            <div class="c5"><img src="chuyenhang.png"/></div>
+            <div class="c20">${ten}</div>
+            <div class="c20">${phone}</div>
+            <div class="c65">${option}</div>
+            <div class="c5"><input  type="button" value="Xóa"/></div>
+        </div>
+        `)
+    })
+    $("div.order-bot").on("click", "div.order-item input[type=button]",function(){  
+        if(confirm("Bạn chắc chắn muốn xóa?") == true)
+            $(this).parent().parent().remove()
+    })
+    
+    }
+    )
+      $(document).ready(function(){
 
         $("#gototop").hide();
 
@@ -181,6 +204,50 @@
     <div class="submit1">
         <input type="submit" id="submit1" value="Đánh Giá" onclick="notification(this)"/>
     </div>
+    <div class="y"> 
+    <div class="blog-title">
+      <h2>CÁC ĐƠN HÀNG CỦA BẠN</h2>
+  </div>
+    <div class="order">
+      <div class="order-top">
+          <div class="order-img"><img src="giohang.png"/></div>
+          <div class="order-main ">
+              <div><h3>Mua Hàng nhanh - ship nhanh</h3></div>
+              <div class="ctrl">
+                  <input id="ten" class="ctrl1" type= "text" placeholder="Họ và tên" />
+                  <input id= "phoneId" class="ctrl2" type= "text" placeholder="Số điện thoại..." />
+                  <input id="optionId" class="ctrl3" type= "text" placeholder="Các món đã chọn..." />
+                  <input id="btnAdd" type="button"value="Mua Ngay" />
+              </div>
+          </div>
+          
+      </div>
+      <div class="order-bot">
+          <div class="order-item">
+              <div class="c5"><img src="chuyenhang.png"/></div>
+              <div class="c20 ">Lê Văn Lâm</div>
+              <div class="c20 ">0966287704</div>
+              <div class="c65">Converse NBA Chuck 70 High-Top</div>
+              <div class="c5"><input  type="button" value="Xóa"/></div>
+          </div>
+          <div class="order-item">
+              <div class="c5"><img src="chuyenhang.png"/></div>
+              <div class="c20 ">Lê Văn Lâm</div>
+              <div class="c20 ">0966287704</div>
+              <div class="c65">Converse NBA Chuck 70 High-Top</div>
+              <div class="c5"><input  type="button" value="Xóa"/></div>
+          </div>
+          <div class="order-item">
+              <div class="c5"><img src="chuyenhang.png"/></div>
+              <div class="c20 ">Lê Văn Lâm</div>
+              <div class="c20 ">0966287704</div>
+              <div class="c65">Chuck Taylor Boston x London Transport</div>
+              <div class="c5"><input  type="button" value="Xóa"/></div>
+          </div>
+          
+      </div>
+      </div>
+      </div>
     <section>
       <div class="lasts">
         <div class="last">

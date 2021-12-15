@@ -13,7 +13,21 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function(){
+        $('#btnAdd').click(function(){
+        var cmt = $("#cmt1").val()
 
+        $("div.form-1").prepend(`
+        <div class="form-cmt">
+                <div class="avt">
+                  <img src="avt4.jfif"/>
+                </div>
+                <div class="content-cmt">
+                  <a href="#">Lê Văn Lâm</a>
+                  <p>${cmt}</p>
+                </div>
+        </div>
+        `)
+    })
         $("#gototop").hide();
 
         $(window).scroll(function(){
@@ -363,8 +377,8 @@
                   <img src="avt4.jfif"/>
                 </div>
                 <div class="content-cmt1">
-                  <textarea rows="2" cols="60" placeholder="Bình luận"></textarea>
-                  <button><i class="fas fa-long-arrow-alt-right"></i></button>
+                  <textarea id="cmt1" rows="2" cols="60" placeholder="Bình luận"></textarea>
+                  <button id="btnAdd"><i class="fas fa-long-arrow-alt-right"></i></button>
                 </div>
               </div>
             </div>
